@@ -13,15 +13,11 @@
             color: white;
         }
         .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             max-width: 500px;
             margin: 0 auto;
         }
         h1 {
-            color: #ff4d6d;
+            color: white;
         }
         img {
             width: 100%;
@@ -61,24 +57,20 @@
 
 <div class="container">
     <h1 id="question"> Will you go on a date with me? </h1>
-    <!-- Cute dog picture placeholder -->
-    <img id="dogPic" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=600" alt="Cute Dog">
+    <img id="dogPic" src="https://pbs.twimg.com/media/EmMgcZ8XIAAJEVB.jpg" alt="Cute Dog">
     
     <div class="btn-container" id="buttons">
-        <button id="yesBtn" onclick="sayYes()">Yes! 🐾</button>
+        <button id="yesBtn" onclick="sayYes()">Yes! Kocham ciebie bardzo :> </button>
         <button id="noBtn" onmouseover="moveNoButton()" onclick="moveNoButton()">No u_u</button>
     </div>
 </div>
 
 <script>
     function sayYes() {
-        document.getElementById('question').innerText = "Yay! It's a date! 🎉🐶";
-        // Changes the dog picture to an even happier dog when she says yes
-        document.getElementById('dogPic').src = "https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=600";
+        document.getElementById('question').innerText = "You are my everything!..";
+        document.getElementById('dogPic').src = "https://theopiperphotography.co.uk/wp-content/uploads/2023/08/Eaves_Hall_Wedding_Photography-1.jpg";
         document.getElementById('buttons').style.display = 'none';
     }
-
-    // A classic trick: The "No" button runs away when she tries to click it!
     function moveNoButton() {
         const noBtn = document.getElementById('noBtn');
         const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - 50);
@@ -89,6 +81,5 @@
         noBtn.style.top = y + 'px';
     }
 </script>
-
 </body>
 </html>
