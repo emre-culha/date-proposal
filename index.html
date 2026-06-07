@@ -19,11 +19,21 @@
         h1 {
             color: white;
         }
-        img {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 15px;
+        .heart {
+            font-size: 120px;
+            color: white;
             margin: 20px 0;
+            display: inline-block;
+            user-select: none;
+            animation: heartbeat 1.2s infinite ease-in-out; 
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            20% { transform: scale(1.1); }
+            40% { transform: scale(1.05); }
+            60% { transform: scale(1.15); }
+            100% { transform: scale(1); }
         }
         .btn-container {
             display: flex;
@@ -57,18 +67,17 @@
 
 <div class="container">
     <h1 id="question"> Will you go on a date with me? </h1>
-    <img id="dogPic" src="https://pbs.twimg.com/media/EmMgcZ8XIAAJEVB.jpg" alt="Cute Dog">
-    
+    <div id="heartDisplay" class="heart">🤍</div>
     <div class="btn-container" id="buttons">
-        <button id="yesBtn" onclick="sayYes()">Yes! Kocham ciebie bardzo :> </button>
-        <button id="noBtn" onmouseover="moveNoButton()" onclick="moveNoButton()">No u_u</button>
+        <button id="yesBtn" onclick="sayYes()">Yes :> </button>
+        <button id="noBtn" onmouseover="moveNoButton()" onclick="moveNoButton()"> No :< </button>
     </div>
 </div>
 
 <script>
     function sayYes() {
-        document.getElementById('question').innerText = "You are my everything!..";
-        document.getElementById('dogPic').src = "https://theopiperphotography.co.uk/wp-content/uploads/2023/08/Eaves_Hall_Wedding_Photography-1.jpg";
+        document.getElementById('question').innerText = "Ja kocham ciebie bardzo tez!..";
+        document.getElementById('heartDisplay').innerText = "💖";
         document.getElementById('buttons').style.display = 'none';
     }
     function moveNoButton() {
